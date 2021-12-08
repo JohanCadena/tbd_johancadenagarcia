@@ -78,3 +78,33 @@ class Proveedor(models.Model):
     class Meta:
         verbose_name= 'Proveedor'
         verbose_name_plural= 'Proveedores'
+
+
+
+class Ingreso(models.Model):
+    proveedor= models.CharField(verbose_name='Nombre Completo', max_length=50, unique=True)
+    date=models.DateTimeField(verbose_name='Fecha')
+    seriecomprobante=models.IntegerField(verbose_name='Serie de Comprobante')
+    piezas=models.IntegerField(verbose_name='Total de Piezas')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name= 'Ingreso'
+        verbose_name_plural= 'Ingresos'
+
+
+class Venta(models.Model):
+    cliente= models.CharField(verbose_name='Nombre Completo', max_length=50, unique=True)
+    date=models.DateTimeField(verbose_name='Fecha')
+    seriecomprobante=models.IntegerField(verbose_name='Serie de Comprobante')
+    total=models.FloatField(verbose_name='Total')
+    
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name= 'Venta'
+        verbose_name_plural= 'Ventas'

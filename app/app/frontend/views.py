@@ -14,3 +14,13 @@ class IndexView(TemplateView):
         context['title'] = 'Articulos'
         context['articuloList'] = Articulo.objects.all()
         return context       
+
+class TelefoniaView(TemplateView):
+    model = Articulo
+    template_name = 'telefonia.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(TelefoniaView, self).get_context_data(**kwargs)
+        context['title'] = 'Articulos'
+        context['articuloList'] = Articulo.objects.all()
+        return context  

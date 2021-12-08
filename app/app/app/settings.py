@@ -88,13 +88,14 @@ DATABASES = {
         'PASSWORD': '7gmail.com',
         'PORT': '3306'
     },
-    'postgres': {
-        'NAME': 'tbd02',
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': 'postgres',
-        'PASSWORD': '7gmail.com',
-        'PORT': '5432'
-    }
+  
+  #  'postgres': {
+   #     'NAME': 'tbd02',
+    #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+     #   'USER': 'postgres',
+      #  'PASSWORD': '7gmail.com',
+       # 'PORT': '5432'
+   # }
 }
 
 
